@@ -1,0 +1,51 @@
+38:    vec3 x0 = v - i + dot(i, C.xxx) ;
+39:    vec3 g = step(x0.yzx, x0.xyz);
+41:    vec3 i1 = min( g.xyz, l.zxy );
+42:    vec3 i2 = max( g.xyz, l.zxy );
+43:    vec3 x1 = x0 - i1 + C.xxx;
+50:             + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+52:    vec3  ns = n_ * D.wyz - D.xzx;
+56:    vec4 x = x_ *ns.x + ns.yyyy;
+57:    vec4 y = y_ *ns.x + ns.yyyy;
+59:    vec4 b0 = vec4( x.xy, y.xy );
+64:    vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+65:    vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+66:    vec3 p0 = vec3(a0.xy,h.x);
+68:    vec3 p2 = vec3(a1.xy,h.z);
+71:    p0 *= norm.x;
+82:    float s1 = snoise(vec3(x.y - 19.1, x.z + 33.4, x.x + 47.2));
+83:    float s2 = snoise(vec3(x.z + 74.2, x.x - 124.5, x.y + 99.4));
+101:    float y = p_z1.x - p_z0.x - p_x1.z + p_x0.z;
+102:    float z = p_x1.y - p_x0.y - p_y1.x + p_y0.x;
+110:    vec3 pos = data.xyz;
+113:    float uSizeParam = vUv.x;
+123:    shape0.x = scale * cos(t0) * sin(t0) / (1.0 + sin(t0)*sin(t0));
+183:        if (faceId == 0.0) shape4 = vec3(cubeSize, cuv.x * cubeSize, cuv.y * cubeSize);
+184:        else if (faceId == 1.0) shape4 = vec3(-cubeSize, cuv.x * cubeSize, cuv.y * cubeSize);
+185:        else if (faceId == 2.0) shape4 = vec3(cuv.x * cubeSize, cubeSize, cuv.y * cubeSize);
+186:        else if (faceId == 3.0) shape4 = vec3(cuv.x * cubeSize, -cubeSize, cuv.y * cubeSize);
+187:        else if (faceId == 4.0) shape4 = vec3(cuv.x * cubeSize, cuv.y * cubeSize, cubeSize);
+188:        else shape4 = vec3(cuv.x * cubeSize, cuv.y * cubeSize, -cubeSize);
+334:    float particleIndex = floor(vUv.y * uTextureSize) * uTextureSize + floor(vUv.x * uTextureSize);
+354:    float n = sin(pos.x * 2.0 + uTime) * cos(pos.y * 2.0 + uTime * 0.8) * sin(pos.z * 2.0 + uTime * 0.6);
+387:    vec3 pos = data.xyz;
+481:      vec4 p = mix(vec4(c.bg, K.wz), vec4(c.gb, K.xy), step(c.b, c.g));
+482:      vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));
+483:      float d = q.x - min(q.w, q.y);
+485:      return vec3(abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x);
+491:      vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+492:      return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+518:        hsv.x = fract(hsv.x + uHueShift);
+602:              if (a && a.pos && typeof a.pos.x === 'number' && typeof a.pos.y === 'number' && typeof a.pos.z === 'number') {
+603:                positions[idx] = a.pos.x;
+607:              if (b && b.pos && typeof b.pos.x === 'number' && typeof b.pos.y === 'number' && typeof b.pos.z === 'number') {
+608:                positions[idx + 3] = b.pos.x;
+731:        if (point && typeof point.x === 'number' && typeof point.y === 'number' && typeof point.z === 'number' && positions) positions.setXYZ(i, point.x, point.y, point.z);
+1003:       (mousePosRef?.current?.x ?? 0) / (window.innerWidth || 1) - 0.5, 
+1036:    state.camera.position.x = 0;
+1047:        const dragX = (rotationRef?.current && typeof rotationRef.current.x === 'number' ? rotationRef.current.x : 0) * 0.02;
+1049:        const targetRotX = THREE.MathUtils.degToRad(manualRotRef?.current && typeof manualRotRef.current.x === 'number' ? manualRotRef.current.x : 0) + dragX + swayX;
+1051:        mainGroupRef.current.rotation.x = THREE.MathUtils.lerp(mainGroupRef.current.rotation.x, targetRotX, delta * 5.0);
+1058:            if (nose && typeof nose.x === 'number' && typeof nose.y === 'number') {
+1059:                targetPosX = -((nose.x) - 0.5) * 15.0; 
+1063:        mainGroupRef.current.position.x = THREE.MathUtils.lerp(mainGroupRef.current.position.x, targetPosX, delta * 4.0);

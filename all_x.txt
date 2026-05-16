@@ -1,0 +1,60 @@
+src/useFaceTracker.ts:85:            leftEAR = Math.sqrt(Math.pow((lTop?.x ?? 0) - (lBot?.x ?? 0), 2) + Math.pow((lTop?.y ?? 0) - (lBot?.y ?? 0), 2)) / 
+src/useFaceTracker.ts:86:                      Math.sqrt(Math.pow((lLeft?.x ?? 0) - (lRight?.x ?? 0), 2) + Math.pow((lLeft?.y ?? 0) - (lRight?.y ?? 0), 2));
+src/useFaceTracker.ts:93:            rightEAR = Math.sqrt(Math.pow((rTop?.x ?? 0) - (rBot?.x ?? 0), 2) + Math.pow((rTop?.y ?? 0) - (rBot?.y ?? 0), 2)) / 
+src/useFaceTracker.ts:94:                       Math.sqrt(Math.pow((rLeft?.x ?? 0) - (rRight?.x ?? 0), 2) + Math.pow((rLeft?.y ?? 0) - (rRight?.y ?? 0), 2));
+src/useFaceTracker.ts:101:            const mouthDist = Math.sqrt(Math.pow((rightMouth?.x ?? 0) - (leftMouth?.x ?? 0), 2) + Math.pow((rightMouth?.y ?? 0) - (leftMouth?.y ?? 0), 2));
+src/App.tsx:258:            x: srcPoint?.x ?? 0, 
+src/App.tsx:734:    const dx = e.clientX - (prevMouseRef?.current?.x ?? 0);
+src/App.tsx:874:      if (rotXInputRef.current) rotXInputRef.current.value = (rotationRef.current?.x ?? 0).toString();
+src/App.tsx:879:          const mx = Number.isFinite(mouse.current?.x) ? (mouse.current?.x ?? window.innerWidth / 2) : window.innerWidth / 2;
+src/Resonance3D.tsx:38:    vec3 x0 = v - i + dot(i, C.xxx) ;
+src/Resonance3D.tsx:39:    vec3 g = step(x0.yzx, x0.xyz);
+src/Resonance3D.tsx:41:    vec3 i1 = min( g.xyz, l.zxy );
+src/Resonance3D.tsx:42:    vec3 i2 = max( g.xyz, l.zxy );
+src/Resonance3D.tsx:43:    vec3 x1 = x0 - i1 + C.xxx;
+src/Resonance3D.tsx:50:             + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+src/Resonance3D.tsx:52:    vec3  ns = n_ * D.wyz - D.xzx;
+src/Resonance3D.tsx:56:    vec4 x = x_ *ns.x + ns.yyyy;
+src/Resonance3D.tsx:57:    vec4 y = y_ *ns.x + ns.yyyy;
+src/Resonance3D.tsx:59:    vec4 b0 = vec4( x.xy, y.xy );
+src/Resonance3D.tsx:64:    vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+src/Resonance3D.tsx:65:    vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+src/Resonance3D.tsx:66:    vec3 p0 = vec3(a0.xy,h.x);
+src/Resonance3D.tsx:68:    vec3 p2 = vec3(a1.xy,h.z);
+src/Resonance3D.tsx:71:    p0 *= norm.x;
+src/Resonance3D.tsx:82:    float s1 = snoise(vec3(x.y - 19.1, x.z + 33.4, x.x + 47.2));
+src/Resonance3D.tsx:83:    float s2 = snoise(vec3(x.z + 74.2, x.x - 124.5, x.y + 99.4));
+src/Resonance3D.tsx:101:    float y = p_z1.x - p_z0.x - p_x1.z + p_x0.z;
+src/Resonance3D.tsx:102:    float z = p_x1.y - p_x0.y - p_y1.x + p_y0.x;
+src/Resonance3D.tsx:110:    vec3 pos = data.xyz;
+src/Resonance3D.tsx:113:    float uSizeParam = vUv.x;
+src/Resonance3D.tsx:123:    shape0.x = scale * cos(t0) * sin(t0) / (1.0 + sin(t0)*sin(t0));
+src/Resonance3D.tsx:183:        if (faceId == 0.0) shape4 = vec3(cubeSize, cuv.x * cubeSize, cuv.y * cubeSize);
+src/Resonance3D.tsx:184:        else if (faceId == 1.0) shape4 = vec3(-cubeSize, cuv.x * cubeSize, cuv.y * cubeSize);
+src/Resonance3D.tsx:185:        else if (faceId == 2.0) shape4 = vec3(cuv.x * cubeSize, cubeSize, cuv.y * cubeSize);
+src/Resonance3D.tsx:186:        else if (faceId == 3.0) shape4 = vec3(cuv.x * cubeSize, -cubeSize, cuv.y * cubeSize);
+src/Resonance3D.tsx:187:        else if (faceId == 4.0) shape4 = vec3(cuv.x * cubeSize, cuv.y * cubeSize, cubeSize);
+src/Resonance3D.tsx:188:        else shape4 = vec3(cuv.x * cubeSize, cuv.y * cubeSize, -cubeSize);
+src/Resonance3D.tsx:334:    float particleIndex = floor(vUv.y * uTextureSize) * uTextureSize + floor(vUv.x * uTextureSize);
+src/Resonance3D.tsx:354:    float n = sin(pos.x * 2.0 + uTime) * cos(pos.y * 2.0 + uTime * 0.8) * sin(pos.z * 2.0 + uTime * 0.6);
+src/Resonance3D.tsx:387:    vec3 pos = data.xyz;
+src/Resonance3D.tsx:481:      vec4 p = mix(vec4(c.bg, K.wz), vec4(c.gb, K.xy), step(c.b, c.g));
+src/Resonance3D.tsx:482:      vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));
+src/Resonance3D.tsx:483:      float d = q.x - min(q.w, q.y);
+src/Resonance3D.tsx:485:      return vec3(abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x);
+src/Resonance3D.tsx:491:      vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+src/Resonance3D.tsx:492:      return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+src/Resonance3D.tsx:518:        hsv.x = fract(hsv.x + uHueShift);
+src/Resonance3D.tsx:602:              if (a && a.pos && typeof a.pos.x === 'number' && typeof a.pos.y === 'number' && typeof a.pos.z === 'number') {
+src/Resonance3D.tsx:603:                positions[idx] = a.pos.x;
+src/Resonance3D.tsx:607:              if (b && b.pos && typeof b.pos.x === 'number' && typeof b.pos.y === 'number' && typeof b.pos.z === 'number') {
+src/Resonance3D.tsx:608:                positions[idx + 3] = b.pos.x;
+src/Resonance3D.tsx:731:        if (point && typeof point.x === 'number' && typeof point.y === 'number' && typeof point.z === 'number' && positions) positions.setXYZ(i, point.x, point.y, point.z);
+src/Resonance3D.tsx:1003:       (mousePosRef?.current?.x ?? 0) / (window.innerWidth || 1) - 0.5, 
+src/Resonance3D.tsx:1036:    state.camera.position.x = 0;
+src/Resonance3D.tsx:1047:        const dragX = (rotationRef?.current && typeof rotationRef.current.x === 'number' ? rotationRef.current.x : 0) * 0.02;
+src/Resonance3D.tsx:1049:        const targetRotX = THREE.MathUtils.degToRad(manualRotRef?.current && typeof manualRotRef.current.x === 'number' ? manualRotRef.current.x : 0) + dragX + swayX;
+src/Resonance3D.tsx:1051:        mainGroupRef.current.rotation.x = THREE.MathUtils.lerp(mainGroupRef.current.rotation.x, targetRotX, delta * 5.0);
+src/Resonance3D.tsx:1058:            if (nose && typeof nose.x === 'number' && typeof nose.y === 'number') {
+src/Resonance3D.tsx:1059:                targetPosX = -((nose.x) - 0.5) * 15.0; 
+src/Resonance3D.tsx:1063:        mainGroupRef.current.position.x = THREE.MathUtils.lerp(mainGroupRef.current.position.x, targetPosX, delta * 4.0);

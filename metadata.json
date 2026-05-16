@@ -1,0 +1,9 @@
+{
+  "name": "Resonance 8",
+  "description": "A monolithic cinematic experience where autonomous agents harmonize around the emergence of Mohamed. Features neural eye tracking, optical flow detection, and collective AI group dynamics.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

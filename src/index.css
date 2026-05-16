@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --animate-spin-slow: spin 8s linear infinite;
+  --font-sans: "Inter", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#030303] text-[#f0f0f0] overflow-hidden antialiased;
+    background-image: 
+      linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%),
+      radial-gradient(circle at 50% 50%, #0a0a1a 0%, #000 100%);
+    background-size: 100% 4px, 100% 100%;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.03;
+    z-index: 100;
+  }
+}
+
+.glass-panel {
+  @apply bg-black/40 backdrop-blur-xl border border-white/10;
+}
+
+.tech-grid {
+  background-size: 30px 30px;
+  background-image: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+}
+
+@keyframes scanline {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+.scanline {
+  @apply absolute inset-0 pointer-events-none overflow-hidden opacity-20;
+  background: linear-gradient(to bottom, transparent 0%, rgba(66, 133, 244, 0.1) 50%, transparent 100%);
+  animation: scanline 8s linear infinite;
+}

@@ -1,0 +1,4 @@
+258:            x: srcPoint?.x ?? 0, 
+734:    const dx = e.clientX - (prevMouseRef?.current?.x ?? 0);
+874:      if (rotXInputRef.current) rotXInputRef.current.value = (rotationRef.current?.x ?? 0).toString();
+879:          const mx = Number.isFinite(mouse.current?.x) ? (mouse.current?.x ?? window.innerWidth / 2) : window.innerWidth / 2;
